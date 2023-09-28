@@ -1,0 +1,60 @@
+Python - Ideas clave:
+
+	- El intérprete funciona interpretando instrucción por instrucción.
+	- Siempre pyhton se instala en un lugar, y es un software.
+	- Autocontenido.
+	- Cuándo escribo pip para actualizar, qué pip llama mi consola?
+	- Tipado dinámico de datos en las declaraciones.
+	- En Pyhton no es correcto hablar de variables.
+	- Todas las cosas que se declaran en Pyhton tienen un tipo, que se ve con type(lavariable).
+	- Variedad de tipos básicos; bool, int, float, str...
+	- En Python todo es un objeto.
+	
+Declaraciones:
+Cada declaración involucra la creación de:
+
+	- Una instancia: concretización de lo declarado.
+	- Una referencia: el identificador/nombre que apunta a una instancia.
+	- Por cada cosa que haga en python (funciones por ejemplo), python me crea una lista de referencias asociada.
+
+¿Qué son los objetos?
+
+	- Leng. con orientación a objetos generalizan el concepto de tipo de dato --> Clases.
+	- Cada clase puede contener:
+		- Atributos
+		- Métodos
+		(Operador punto)
+	- El objeto es una instancia de una clase definida.
+	
+Objetos - ideas clave:
+
+	- Una referencia no es equivalente a una instancia.
+	- Las referencias (identificador) apuntan a objetos (instancias). Una referencia va a estar apuntando a algo (o nada).
+	- Atributos y métodos son accesbiles con el punto.
+	- Cada objeto tiene un tipo: la clase de la instancia.
+	- Cada objeto tiene un identificador.
+	
+Tipos compuestos:
+
+	- list: listas mutables y ordenadas de datos heterogéneos.
+		- Puedo meter lo que quiera en una lista, 		objetos, no necesariamente números.
+	
+	- tuple: agrupaciones inmutables de objetos, también heterogéneos. Me permite hace una agrupación de objetos y encapsularlos para que sean trasladados. Paquetes de transmisión de datos.
+	- set: agrupación no ordenada de elementos únicos.
+	- dict: diccionario de objetos, indexados por etiquetas.
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	

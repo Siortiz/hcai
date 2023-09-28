@@ -1,0 +1,15 @@
+GNU Make
+
+- Make me permite hacer una lista ordenada en qué son las cosas que quiero crear, qué necesito para crearlas y cómo las creo.
+
+- Se utiliza para la compilación de programas, usualmente de bajo nivel.
+- Make puede identificar automáticamente qué programas fueron modificados antes de la ejecución.
+- Funciona en base a reglas en un archvio Makefile.
+
+Makefile:
+	- objetivo ... : dependencias ...
+		recetas
+		...
+		
+	- Es posible definir variables dentro de los makefiles.
+	- Agrupar archivos en una variable.

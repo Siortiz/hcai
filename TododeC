@@ -1,0 +1,69 @@
+Clase de C:
+
+- Ya se programar en C, porque Python sigue la estructura de programación de C.
+- Variable de tipo estático --> Las variables mantienen su definición.
+- Cuidar esa definición en cierta operación.
+
+SINTAXIS BÁSICA
+
+- ;, identación.
+- {}, instrucciones.
+
+#include <stdio.h>
+int main() {
+	printf("Hola mundo");
+	
+	return 0;
+}
+
+- Siempre que hay un #, el código será pre-procesado.
+- Comentarios /, /* */.
+
+----------Sintaxis de C: preprocesador----------
+
+No es parte del código, instrucciones previas al compilado.
+
+#include -> Cómo se incluyen las librerías
+	- Se pueden realizar librerías propias.
+	- Reutilización.
+#define -> Definir un identificador
+	- Reemplaza texto antes de compilar.
+#ifdef
+
+Variables
+
+Operadores:
+
+	- C admite operadores aritméticos (+, -, *, /), respetando reglas de precedencia matemática.
+	- No hace conversiones entre enteros y flotantes.
+	- Librerías para ciertas operaciones (math.h).
+	
+Control de flujo:
+
+	- Los condicionales son iguales que en python.
+	- El uso de llaves depende de la cantidad de instrucciones, se pueden omitir en instrucciones únicas.
+	- C introduce 3 tipos de loops, 1 for y 2 whiles; la sintaxis del for es diferente for(inicio; condición; paso). While(condición){...} y do{...}while(condición).
+
+Arrays y memoria estática:
+
+	- Colección de elementos, donde cada elemento tieneun tipo de datos y todos son del mismo tipo.
+	- El operador [] es de indexación.
+	- Los elementos se almacenan de forma consecutiva en la memoria.  
+	
+Punteros: 
+	- Horror de las personas que aprenden C.
+	- Es una variable, cuyo contenido es una dirección de memoria de otra variable.
+	
+Punteros y memoria dinámica:
+
+malloc: para que el sistema operativo me entregue la memoria que yo quiero/reserva memoria.
+
+	Luego de usar, la memoria dinámica se debe liberar.
+
+
+
+
+
+
+
+
