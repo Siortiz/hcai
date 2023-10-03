@@ -42,18 +42,58 @@ Tipos compuestos:
 	- tuple: agrupaciones inmutables de objetos, también heterogéneos. Me permite hace una agrupación de objetos y encapsularlos para que sean trasladados. Paquetes de transmisión de datos.
 	- set: agrupación no ordenada de elementos únicos.
 	- dict: diccionario de objetos, indexados por etiquetas.
+
+Clase 28 Septiembre:
+
+- Puedo agregar métodos a cualquier objeto que se me ocurra, a una instancia que ya está definida.
+
+- Función y método son lo mismo, método pertenece a la clase.
+
+- Dos tipos de atributos en una clase:
+	- Atributos de instancia.
+	- Atributos de clase (mandarnos al psiquiátrico): son compartidos por todas las instancias generadas en una clase.
 	
+Métodos (de instancia):
+
+	- Método: función que pertenece a un objeto.
+	- self como primer argumento.
 	
+Otros métodos:
 	
+	- Métodos de clase -> cls en vez de self
+	- Métodos estáticos @staticmethod -> no self ni cls.
 	
+	- Getters y setters: consultar y modificar atributos internos de los objetos.
+		- En matplotlib, set (xlim, ylim, xlabel, etc.)
+	- Métodos especiales: asociados a acciones de Python y pueden ser definidos por necesidad.
+		- La mayoría de los métodos especiales no se utilizan tan frecuentemente.
+		- Todos los operadores tienen asignado un método.
+		- Puedo implementar dentro de la clase los operadores. 
+	*Objetivo de la clase: crear clases y algo más...
 	
-	
-	
-	
-	
-	
-	
-	
+Clases de datos:
+	- Para definir un tipo de clase más simple, que sólo sirva de empaquetador de datos.
+
+Herencia: metafísica class. Abstracciómmm.
+	- Proceso natural, capacidad de definir un objeto a partir de otro que ya está definido.
+	- Creación de clases a través de herencia.
+
+Clase 03 de octubre:
+
+- La función super(): sirve para llamar métodos de la clase base. Es la única función que rompe las reglas de Python (según el Cris), porque trata una función como un objeto.
+
+- Namemangling dificulta el acceso a una clase, emular el comportamiento de un atributo protegido.
+
+- Polimorfismo: Ditto de la programación. En Python, un objeto de una clase puede ser tratado como de otra clase relacionada. Me permite usar objetos de diferente clase como si fueran iguales.
+
+- Herencia múltiple: capacidad de generar una clase derivada utilizando no solo una clase base, sino que múltiples.
+	- MRO nos devuelve una lista relacionada al orden que sigue para buscar referencias. Crucial para solucionar potenciales problemas de Herencia múltiple.
+
+- Objetos compuestos: utilizar objetos como atributos de otro. Not verbo to be -> verbo have.
+
+
+
+
 	
 	
 	
