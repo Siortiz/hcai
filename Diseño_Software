@@ -1,0 +1,100 @@
+Principios de Diseño de Software 
+
+- La linealidad es importante en el diseño de un algoritmo.
+- Un código se comporta como la definición de "agente inteligente". Entidades que se pueden comportar de forma autónoma (? -> No es necesario definir el problema.
+- Input -> Todas las cosas que yo le entrego al programa.
+- Output -> Todo lo que va a botar.
+- I/O son información, datos.
+
+- DRY -> Don't Repeat Yourself.
+- KISS -> Keep It Simple and Stupid
+- RTFM -> Read The Fucking Manual
+
+Pseudocódigo
+
+- Representación de alto nivel en texto libre informal de un algoritmo o proceso.
+- Es claro y breve.
+
+Diagramas de flujo
+
+- Representación gráfica de un pseudocódigo.
+- Símbolos definidos para explicar qué sucede realmente.
+
+Algoritmos en POO vs Procedimental
+
+- Programación procedimental: el algoritmo se diseña a partir de los verbos identificados.
+
+- POO: el algoritmo se diseña a partir de los verbos identificados.
+	- Principios SOLID:
+		- S: Principio de responsabilidad única.
+		- O: Principio de abierto/cerrado.
+		- L: Principio de sustitución de Liskov.
+		- I: Principio de segregación de interfaces.
+		- D: Principio de inversión de la dependencia.
+- Puedo construir una clase interfaz, que me permita comunicarme entre clases.
+- Lo ideal es tener una clase para cada responsabilidad.
+
+- Hacer códigos que sean completamente escalables. Modularidad. Encontrar la línea donde está lo que quiero cambiar.
+
+Unified Modeling Language (UML)
+
+- Estrategia que se produjo para realizar esquemas que representan de forma visual un modelo del sistema.
+
+- Diagrama de flujo son parte del estándar UML.
+
+UML: Diagrama de clases
+
+- Describe la organización de un sistema mostrando las clases definidas, sus atributos, operaciones y las relaciones entre los objetos.
+
+DOCUMENTACIÓN DE SOFTWARE
+
+- De ahora en adelante --> No hacer nada sin escribir por qué lo estoy haciendo.
+- No es simple descifrar qué hace un código a través del código fuente --> Es importante la documentación!!
+- El yo del futuro tiene que entender por qué hice lo que hice.
+
+- Eficiencia temporal.
+- La documentación ayuda a que el código sea comprensible, utilizable y mantenible, tanto para el usuario u otros desarrolladores.
+
+Qué se debería documentar?
+
+- Software final --> Documentación externa (cómo se usa, tutoriales, etc.)
+- Código fuente --> Documentación interna (archivos/módulos creados, clases, declaraciones, limitaciones, etc.)
+
+Buenas prácticas:
+
+- No hay que escribir un libro de documentación, debe ser lo más claro y conciso posible
+- Debe relfejar el estado actual del software.
+- Mantener cierta homogeneidad, consistencia.
+- No es necesario que describa lo que está haciendo, sino explicar por qué.
+
+Documentación de código fuente:
+
+- Bloques de código, breves comentarios explicativos del algoritmo para ahorrar tiempo en entender el por qué hice cada cosa.
+
+- Clases, describir el propósito de los objetos creados con la clase, sus atributos, sus métodos, ojalá ejemplos de uso.
+
+- Funciones/métodos, descrbir qué hace la rutina, parámetros de entrada, etc.
+
+Herramientas documentación de código:
+
+- Para proyectos de mayor tamaño.
+- Doxygen: para C/C++, aunque soporta otros lenguajes (apariencia noventera).
+- Sphinx: diseñado para Python --> Revisar.
+
+
+
+
+
+
+
+
+
+
+
+		
+		
+		
+		
+		
+		
+		
