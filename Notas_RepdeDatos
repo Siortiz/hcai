@@ -1,0 +1,80 @@
+Gestión, representación y almacenamiento de datos
+
+Representación digital de los números
+
+- Cualquier número se puede representar en cualquier base (hexagesimal, binario, etc.)
+- La unidad mínima de almacenamiento de computadora (en memoria y disco) es el bit. Sólo puede contener 1 o 0, base binaria. 
+	- El número 132 requiere 8 bits para ser representado digitalmente.
+
+La rep. digital de cada número está definida por el tipo de dato utilizado.
+	- Números enteros: el int clásico tiene un límite en su representación de 32 bits. Se puede usar unsigned int o los long int (64 bits) (en C).
+	- Números flotantes: Mantisa: contiene la magnitud del número (en binario puro).
+		- Consideraciones: 
+			- Errores de redondeo.
+			- Se define un epsilon que ya es lo suficientemente pequeño para que un objeto sea igual a otro.
+			- La representación decimal en la pantalla no es necesariamente precisa al número que busco usar.
+
+Almacenamiento en archivos de texto
+
+- Entendemos por archivo de texto (o ASCII) a todo archivo que consiste en un conjunto de caractereres (incluyendo espacios, tabs, y saltos de línea, entre otros) ordenados de forma secuencial.
+
+- Un archivo de texto se puede entender como un array de strings.
+
+3.2 ALMACENAMIENTO DE DATOS
+
+La importancia de los datos:
+
+- 4ta revolución industrial
+- Digitalización
+- Lenguaje común es importante
+
+Puntos a considerar:
+
+- En cuanto a almacenamiento, donde la almaceno, qué tan fiable es el lugar donde la almaceno.
+
+- Composición: identificación del dato; numérico/categórico, relacional/no-relacional, homogéneo/heterogéneo.
+
+- Tamaño: es posible que exista una restricción en relación al tamaño de la información contentida.
+
+- Comunicación: estándares de almacenamiento adecuados, que permitan la reproducibilidad.
+
+- Escalamiento: los datos son estáticos o se modificarán con el tiempo?
+
+Almacenamiento en texto plano
+
+- Representación de datos en texto sin formato.
+- Tablas con filas y columnas, fila -> un solo registro, columnas -> campos.
+- Simples, ideales para compartir información entre diferentes aplicaciones.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+			
+	
+
