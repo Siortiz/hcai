@@ -47,11 +47,44 @@ Almacenamiento en texto plano
 - Simples, ideales para compartir información entre diferentes aplicaciones.
 
 
+Clase 07 de noviembre
 
+readlines lee todo y se queda al final y readline lee una única línea.
 
+El acceso de datos por columna en un array con numpy está restringido, con pandas se puede hacer, quizás con otras restricciones.
 
+Por registro -> filas
+Por campo -> columnas
 
+unpack: toma un registro y lo desempaqueta.
 
+pandas: es una librería para trabajar tablas, ésta está organizada y es accesbile de manera eficiente. Hay que tomar en cuenta todos los parámetros que están asociados a ella, tiene ciertas ventajas sobre numpy.
+  
+
+Almacenamiento en binario:
+
+- Representación que es directamente legible por la máquina.
+- Ventajas: 
+	- Tamaño
+	- Rapidez (no necesito traducir nada (yo como computadora).
+	- Precisión (sin reducción de cifras significativas).
+	
+- Desventajas:
+	- Estructura (necesidad de conocer los tipos de datos almacenados y su orden).
+	- Arquitectura (representaciones distintas de los datos en función de variación en la arquitectura (Endianess, littleness).
+	
+Almacenamiento en HDF-5 (Hierarcical Data Format):
+
+- Formato de archivo y una biblioteca para almacenar y organizar grandes cantidades de datos.
+
+- Se accede utilizando una librería, en Python: h5py.
+
+*Necesitamos la librería oficial de hdf-5 (o no? ಠ_ಠ).
+El formato interno:
+
+	- Grupos: equivalentes a directorios en un sistema de archivos --> Organizar datos de forma jerárquica, partiendo desde un grupo raíz "/".
+	- Datasets: arrays multidimensionales, similares a los de numpy.
+	- Atributos: pequeños fragmentos de información, que describen las caracterísitcas de los datos.
 
 
 
