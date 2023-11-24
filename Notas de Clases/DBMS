@@ -1,0 +1,44 @@
+Bases de Datos y SQL
+
+- Una base de datos es un sistema que permite almacenar, administrar y recuperar grandes cantidades de información.
+
+User --> DBMS (Data Base Management System) --> Métodos de acceso --> Datos
+
+Tipos de bases de datos:
+Se pueden clasificar según:
+
+- Variabilidad (estáticas o dinámicas).
+- Naturaleza (bibliográficas, textos, directorios, datos numéricos/categóricos).
+
+
+Bases de datos orientada a objetos: asignar jerarquías orientada a objetos para organizar datos.
+
+Las bases de datos más utilizadas son las relacionales.
+
+Esquemas de bases de datos --> Para visualizar cómo se estructura una base de datos de forma interna.
+
+En una BD relacional, el esquema define sus tablas, los campos en cada tabla y las relaciones entre cada campo y cada tabla.
+
+Ejemplo: Tabla Usuarios: ID, Nombre, Correo, Fecha de Registro, etc.
+
+SQL (Structured Query Language)
+
+- Lenguaje informático --> Administrar y recuperar información de sistemas DBMS.
+
+	- Permite especificar qué datos se desean obtener, no cómo obtenerlos.
+	- Operaciones Estándar: CRUD (Create, Read, Update, Delete).
+	- Independiente de la plataforma: funciona en múltiples DBMS.
+	- Utiliza instrucciones específicas para definir estructuras de datos, consultar datos, modificar datos, y controlar el acceso.
+
+
+
+
+
+
+
+
+
+
+
+
+

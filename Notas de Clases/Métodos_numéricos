@@ -1,0 +1,95 @@
+Introducción a los métodos numéricos 
+
+¿Qué son?
+
+Análisis numérico --> algoritmos para la manipulación y solución de problemas matemáticos.
+
+	- Interpolación y aproximación, diferenciación e integración (EDOs y EDPs), y optimización.
+	
+Scipy: incorpora un conjunto de soluciones para lo mencionado anteriormente. Cada uno de las funciones implementadas están asociados a métodos específicos probados y testeados en la librería.
+
+- Integración numérica para funciones y EDO (scipy.integrate).
+- Optimización: minimización de funciones, ajustes de curvas, búsqueda de raíces (scipy.optimize).
+- Etc.
+
+Interpolación y aproximación: sirven para construir una función que se aproxima a un conjunto dado de puntos de datos.
+
+Interpolación: define una función que pase exactamente por un conjunto de puntos... Su fiabilidad depende de la característica de los datos. Rectas, polinomios.
+
+Aproximación: define una función que se aproxime a los datos. Coincidencia que cercana que minimice el error total... Regresión lineal.
+
+Ajuste de curvas (scipy.optimize.curve_fit): es porque estoy buscando un modelo para representar mis datos. Ahora yo sé que mis datos representan algo físico, quiero alcanzar cierta predictibilidad.
+
+	-Mínimos cuadrados: se busca la función que minimiza la suma de los cuadrados de las diferencias entre los datos y la función de ajuste.
+
+23 de noviembre:
+
+Prueba de chi-cuadrado de Pearson: pesando el mínimo cuadrado por el dato que estoy encontrando.
+
+Chi-cuadrado reducido: solo compara funciones, no fenómenos físicos!
+
+Métodos Monte Carlo:
+
+- Técnicas de simulación computacional --> Muestreos aleatorios para calcular el comportamiento de un sistema.
+
+- Algoritmos no deterministas.
+
+- Requieren un gran número de iteraciones.
+
+Clase 24 de noviembre:
+
+Cadenas de Markov: representan procesos estocásticos a tiempo discreto.
+
+	- Propiedad de Markov: la probabilidad de cada estado futuro depende únicamente del estado actual, no de los estados pasados.
+	- Estado: configuración particular o condición que el sistema puede adoptar.
+	- Transiciones: cambios de un estado a otro --> probabilidad de que el cambio suceda en un intervalo temporal (matriz de transición).
+	
+¿Para qué c usan?
+
+Predicción meteorológica, bioinformática, epidemiología, salud, genética, economía; IA, machine learning; juegos de azar, entretenimiento, etc.
+
+Cadenas de Markov con Monte Carlo (MCMC): conjunto de algoritmos utilizados para muestrear una distribución de probabilidad.
+
+Distintas a hacer estadística inferencial --> Inferencia bayesiana.
+
+- Metodología: 
+	- MCMC genera una serie de muestras (estados) que se utilizan para representar una distribución conocida.
+	- Estado inicial --> Transiciones a nuevos estados (bajo ciertas reglas de probabilidad(Montecarlo)).
+	- Con suficientes iteraciones, la distribución de las muestras tiende a la distribución objetivo.
+	- Se pueden descartar las primeras muestras para asegurar que la cadena ha alcanzado su estado estacionario (quemar la cadena).
+
+El algoritmo MCMC usualmente utilizado es el de Metropolis-Hastings.
+
+Metropolis-Hastings
+
+Para obtener una secuencia de muestras aleatorias de una distribución de probabilidad para la cual el muestro directo es difícil. Se propone una nueva muestra --> se decide si aceptarla o rechazarla en función de la probabilidad relativa a la muestra actual.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
