@@ -1,0 +1,165 @@
+Simulaciones
+
+Simulación de N-cuerpos
+
+- Integración numérica en el tiempo sobre las ecuaciones que gobiernan las distintas fuerzas actuando sobre un conjunto de N partículas.
+- Gravedad, viscosidad, presión, etc.
+
+Se usan para: 
+	- Obtener información sobre sistemas físicos que no se pueden reproducir en laboratorio.
+	
+Pasos a seguir:
+
+- Seleccionar el problema/fenómeno que quiere ser estudiado. Son los métodos numéricos disponibles adecuados para tratar el problema?
+
+- Elegir cuidadosamente el marco físico de trabajo.
+
+- Generar las condiciones iniciales para el problema (particularmente difícil)
+
+- Para resolver las ecuaciones que gobiernan los distintos procesos físicos --> hace falta discretizar!
+
+- Escribir/seleccionar el código.
+
+Los métodos numéricos son siempre aproximaciones a las soluciones exactas de una o varias ecuaciones.
+
+Simulaciones numéricas en astrofísica
+
+Formación estelar --> Galaxias --> Universo a gran escala
+
+Permiten poner en práctica suposiciones/hipótesis.
+
+Son tremendamente caras --> Centros de supercómputos
+
+Marco teórico
+
+Lambda Cold Dark Matter
+
+Principio cosmológico --> distribución de masa y energía es isotrópica y homogénea.
+
+Radiación cósmica de fondo --> evidencia de la isotropía
+
+Condiciones iniciales: 
+	- Intestabilidades gravitacionales y formación de estructura... Very small fluctuations --> Gravity amplifies fluctuations.
+	
+Método numérico: Ejemplo: GADGET-2
+
+Estrellas --> Evolución estelar, enriquecimiento químico, procesos de feedback (SN), etc.
+Materia oscura --> Gravedad
+Gas --> Hidrodinámica, etc.
+
+Para las estrellas: distribución de partículas (no colisional) que responden dinámicamente solo a la gravedad.
+
+Se deben incluir: procesos de feedback --> Supernovas - AGN.
+
+Clase 30 de noviembre
+
+Radiación cósmica de fondo
+
+Mapa e isotropía: la variación de temperaturas en el CMB es del orden de e-3 K.
+
+Primer paso: crear un 'universo' homogéneo e isotrópico.
+
+Segundo paso: perturbar esta distribución de acuerdo al CMB.
+
+Transformada de Fourier: es más conveniente trabajar en el espacio de Fourier --> Descomponer una señal en una suma de senos y cosenos... Cada onda tendrá una frecuencia y amplitud asociada.
+
+	- Se trabaja con el contraste de densidad -> Cómo varía la densidad con respecto a la densidad media del universo.
+
+Espectro de potencia de distintos modelos cosmológicos:
+
+	- Cold dark matter -> Velocidad de dispersión es pequeña, los grumos de masa pequeños no se dispersan y se desarman.
+	- Hot dark matter -> Velocidad de dispersión más alta, los grumos más masivos tienen el potencial gravitacional suficiente para soportarse.
+	Homogéneo e isotrópico --> Power spectrum --> Initial conditions
+
+	Función de transferencia: Hot -> Warm -> Cold Dark Matter
+	
+Evolución temporal: todo sistema dinámico puede ser descrito por una función de distribución en el espacio de fases.
+	- El estado de un sistema está dado por la distribución en el espacio de fase.
+	
+	Colissionless boltzmann equations --> Sistema relajado: densidad y potencial constantes... La distribución de DM puede ser descrita como no colisional.
+	Sin embargo, las estructuras no están colapsadas -> No existe un potencial global que se mantenga constante en el tiempo (se integra en diferentes intervalos de tiempo).
+	
+	Aproximamos la distribución continua en el espacio de las fases utilizando un método Monte Carlo.
+
+- Softening lenght --> Suavizado para evitar que toda la distribución de masas se la lleven pocas partículas, sintiendo el potencial gravitacional de aquellas que están al lado (partículas comunistas, parafraseando).
+
+
+Métodos directos para calcular las fuerzas - PP method --> Estimar el potencial que siente cada partícula.
+	- Particle-Particle integration --> Calcular directamente la fuerza que cada partícula ejerce en las otras partículas del sistema, si nos paramos una partícula alpha. --> Se requieren muchas evaluciones, no es eficiente!
+	
+Alternativas al PP method:
+
+	- Métodos directos para calcular fuerzas - Tree method: técnica utilizada en simulaciones de N-cuerpos, donde n es el número de partículas o masas en interacción gravitacional. Para generar el árbol --> Subdivisión de las cajas para aislar solo una partícula al final, de cada cajita: masa y centro de masas. }
+	Opening angle --> Establece un límite angular  a partir del cual se considera que un grupo de partículas puede ser aproximado como una sola partícula.
+	
+	Ventajas de trabajar con un método árbol: muchísimo más eficiente en el método PP: O(Log(N)N) vs O(N^2)
+		- Al utilizar los centros de masas puede generar errores en los cálculos de la fuerza.
+		- Para mejorar estas estimaciones, se pueden utilizar expansiones multipolares de la distribución de masa dentro de cada celda a ser evaluada.
+		- Típicamente con considerar hasta el cuadrupolo es suficiente.
+		Importante: el árbol no debe ser calculado en cada integración.
+		
+	- Métodos para calcular fuerzas - Particle Mesh (PM) --> El potencial gravitacional del sistema se construye sobre una rejilla a partir del campo de densidad y resolviendo la ecuación de Poisson asociada.
+	
+	Ventajas: fácil de implementar. Para aplicaciones en las que la masa llena el volumen, suele ser más rápido que el método de árbol (factor de O(N lnN) cte en términos más pequeños.
+	Desventajas: la app de la fuerza es anisotrópica en la rejilla.
+	
+	
+	Métodos para integración de órbitas: Condiciones?
+	
+	- Consistencia: solucion y(x) -> aproximación n(x) con un paso h... Es consistente cuando y(x)-n(x) tiende a 0 cuando h tiende a 0.
+	- Bajo error local.
+	
+	- Bajo error global.
+	
+	Consideraciones para integración básica de órbitas:
+	
+	- High order integrators.
+	- Symmplectic integrators.
+	
+	Método de Euler
+	Método del punto medio
+	Método del salto de la ranita
+	Método de Runge-Kutta (no son simplécticos)
+	
+Modelando el gas: Dinámica del gas
+
+El estado de un fluido está especificado por: Densidad (Escalar), Presión (Escalar), Campo de velocidad (Vectorial), Potencial gravitatorio (Escalar).
+
+Al medir estas variables, especificamos el estado de un fluido
+
+Ecuación de continuidad, de movimiento y potencial gravitacional. --> Formalismo Euleriano o Lagrangiano.
+
+Enfoque Lagrangiano --> Smooth Particle Hydrodynamics: funciona dividiendo el fluido en un conjunto de elementos móviles discretos i, j, llamados partículas.
+
+Enfoque Euleriano --> Adaptive-Mesh Refinement (AMR): se establecen grillas (cajas) para definir el fluido. Ubicaciones específicas en el espacio a través de las cuales el fluido fluye a medida que pasa el tiempo.
+
+Alternativas? Moving Mesh... Ejemplo: AREPO, código de malla móvil que sigue la magneto-hidrodinámica (MHD) y la dinámica sin colisiones en un contexto cosmológico.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+	
+	
+	
+	
+
+
+
+
+
+
+
+
